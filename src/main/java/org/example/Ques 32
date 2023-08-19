@@ -1,24 +1,30 @@
-//Ques 32 :
+//Ques 32:
 
 public class Main
 {
 	public static void main(String[] args) {
-	    int n = 5;
-        for(int i=1; i<=n; i++){
-        	for(int j=1; j<=2*i-1; j++){
-        		if(j%2 ==1){
-        			System.out.print(i);
-        		}else System.out.print("*");
-        	}
-        	System.out.println();
-        }
-        for(int i=n-1; i>=1; i--){
-        	for(int j=1; j<=2*i-1; j++){
-        		if(j%2 ==1){
-        			System.out.print(i);
-        		}else System.out.print("*");
-        	}
-        	System.out.println();
-        }
+		int n=5;
+		
+		int num=1;
+		int val=1;
+		for(int i=1;i<=n*2-1;i++){
+		    for(int j=1;j<=num*2-1;j++){
+		        if(j%2==0){
+		          System.out.print("* ");  
+		        }
+		        else
+		        System.out.print(val+" ");
+		  
+		    }
+		    if(i<n){
+		      val++; 
+		    num++;  
+		    }else{
+		        val--; 
+		    num--;
+		    }
+		    
+		    System.out.println();
+		}
 	}
 }
